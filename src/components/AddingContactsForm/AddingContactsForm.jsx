@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/actions';
+import { addContact } from 'redux/contactsSlice';
 import { getContacts } from 'redux/selectors';
 import { Formik } from 'formik';
 import { contactsSchema } from '../../validation';
