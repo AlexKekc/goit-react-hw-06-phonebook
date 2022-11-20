@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setFilter } from 'redux/filterSlice';
-import { getFilter } from 'redux/selectors';
+import { setFilter, getFilter } from 'redux/filterSlice';
 import { FilterLabel, FilterInput } from './SearchingFilter.styled';
 
 export const SearchingFilter = () => {

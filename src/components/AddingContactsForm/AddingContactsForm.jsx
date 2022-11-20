@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/contactsSlice';
-import { getContacts } from 'redux/selectors';
+import { addContact, getContacts } from 'redux/contactsSlice';
 import { Formik } from 'formik';
 import { contactsSchema } from '../../validation';
 import toast from 'react-hot-toast';
