@@ -14,7 +14,7 @@ import { contactsReducer } from 'redux/contactsSlice';
 import { filterReducer } from 'redux/filterSlice';
 import { combineReducers } from 'redux';
 
-const reducers = combineReducers({
+const rootReducer = combineReducers({
   contacts: contactsReducer,
   filter: filterReducer,
 });
@@ -25,10 +25,10 @@ const persistConfig = {
   whitelist: ['contacts'],
 };
 
-const persistedContactsReducer = persistReducer(persistConfig, reducers);
+const persistedRootReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-  reducer: persistedContactsReducer,
+  reducer: persistedRootReducer,
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {

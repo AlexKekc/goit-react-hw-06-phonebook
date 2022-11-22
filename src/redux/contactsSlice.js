@@ -9,7 +9,7 @@ const contactsSlice = createSlice({
   reducers: {
     addContact: {
       reducer(state, action) {
-        state.push(action.payload);
+        state.unshift(action.payload);
       },
       prepare({ name, number }) {
         return {

@@ -8,7 +8,7 @@ export const SearchingFilter = () => {
   const filter = useSelector(getFilter);
 
   const changeFilter = event => {
-    dispatch(setFilter(event.currentTarget.value));
+    dispatch(setFilter(event.currentTarget.value.trim()));
   };
 
   return (
